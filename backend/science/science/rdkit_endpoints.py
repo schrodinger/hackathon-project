@@ -2,6 +2,7 @@ from rdkit import Chem
 from rdkit.Chem import Draw
 from rdkit.Chem.Draw import rdMolDraw2D
 from rdkit.Chem import QED
+from rdkit.Chem.rdMolInterchange import MolToJSON, JSONToMols
 
 import enum
 import itertools
@@ -123,3 +124,11 @@ def _remove_rgroup_atoms(core):
         product.RemoveAtom(at_idx)
     product.CommitBatchEdit()
     return product
+
+
+def json_to_mol(mol_as_json):
+    return JSONToMols(mol_as_json)
+
+
+def mol_to_json(mol):
+    return MolToJSON(mol)
