@@ -4,7 +4,7 @@ from rest_framework.parsers import JSONParser
 
 from api.enumerate.serializers import EnumerateSerializer
 
-from science.rdkit_endpoints import rgroup_enumerate
+from science.science.rdkit_endpoints import rgroup_enumerate
 
 
 class Enumerate(APIView):

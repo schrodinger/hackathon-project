@@ -1,5 +1,5 @@
 from django.urls import path
 
-from api.smiles_to_mol import views
+from api.image import views
 
-urlpatterns = [path("", views.ImageGenerationSerializer.as_view())]
+urlpatterns = [path("", views.GenerateImage.as_view())]

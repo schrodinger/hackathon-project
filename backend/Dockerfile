@@ -16,5 +16,6 @@ COPY api ./api
 COPY science ./science
 RUN pip install -r requirements.txt
 RUN apt-get update &&  apt-get install ffmpeg libsm6 libxext6  -y
+#TODO see if we can cut down on the number of installs above
 
 ENTRYPOINT ["/bin/bash", "run.sh"]
